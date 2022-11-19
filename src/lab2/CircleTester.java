@@ -19,6 +19,6 @@ public class CircleTester {
         System.out.println("Площадь поверхности: " + a.area() + "; длина окружности: " + a.length());
         Circle b = new Circle(15, sample);
         System.out.println(b.toString());
-        System.out.println(Circle.areEqual(a, b));
+        System.out.println("Окружности a и b равны: " + Circle.areEqual(a, b));
     }
 }

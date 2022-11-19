@@ -24,8 +24,8 @@ public class Tester {
         Circle b = new Circle(r, a);
 //        System.out.println(b.toString());
 
-        for(int i = 0; i < arr.size(); i++){
-            System.out.println(arr.get(i).toString());
+        for(Circle c : arr){
+            System.out.println(c.toString());
         }
     }
 }

@@ -15,6 +15,9 @@ public class Shop {
         items.add(a);
     }
 
+    // Удаление из вектора по индексу
+    public static void deleteItem(int index){ items.remove(index); }
+
     public static void displayItems(){
         System.out.println("Компьютеры: ");
         for(int i = 0; i < items.size(); i++){

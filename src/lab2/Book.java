@@ -3,19 +3,17 @@ package lab2;
 /* Создать класс, описывающий книгу (Book). В классе должны быть
 описаны нужные свойства книги (автор, название, год написания и т. д.) и
 методы для получения, изменения этих свойств. Протестировать работу класса
-в классе BookTest, содержащим метод статический main(String[] args). Создать
-класс книжная полка, в котором поля данных класса это массив объектов типа
-книги (Book, и количество книг на книжной полке. Написать методы класса,
+в классе BookTest, содержащим метод статический main(String[] args). Написать методы класса,
 которые возвращают книги с самым поздним и самым ранним сроком издания.
 Написать метод класса, позволяющий расставить книги на книжной полке в
 порядке возрастания года выпуска. */
 
-public class Book {
+public class Book implements Comparable<Book> {
     private String title, author;
     private int publishYear, pages;
 
     public Book() {
-        title = "Default Title Book";
+        title = "Default Title";
         author = "No Name";
         publishYear = 0;
         pages = 0;
@@ -26,6 +24,10 @@ public class Book {
         this.author = author;
         this.publishYear = publishYear;
         this.pages = pages;
+    }
+
+    public int compareTo(Book b){
+        return getPublishYear() - b.getPublishYear();
     }
 
     public int getPages() {
@@ -62,6 +64,6 @@ public class Book {
 
     @Override
     public String toString(){
-        return "Книга " + this.title + ". Автор: " + this.author;
+        return "Книга " + this.title + ". Автор: " + this.author + " Год: " + this.publishYear;
     }
 }

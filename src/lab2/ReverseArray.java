@@ -7,8 +7,8 @@ package lab2;
 public class ReverseArray {
     public static void main(String[] args) {
         String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-        for(String a: cars){
-            System.out.print(a + " ");
+        for(String car: cars){
+            System.out.print(car + " ");
         }
         System.out.print("\n");
         for (int i = 0; i < cars.length / 2; i++) {

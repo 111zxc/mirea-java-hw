@@ -34,7 +34,7 @@ public class Dog {
     }
 
     // Возвращает в "человеческих" годах
-    public int getDogAge(){
+    public int getHumanAge(){
         return this.age * 7;
     }
 

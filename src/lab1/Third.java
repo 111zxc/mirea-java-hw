@@ -16,7 +16,7 @@ public class Third {
         if (sc.hasNextInt()){
             n = sc.nextInt();
         }
-        int array[] = new int[n];
+        int[] array = new int[n];
         int sum = 0; int i = 0; int min = 0; int max = 0;
         do {
             System.out.print("Введите число: ");

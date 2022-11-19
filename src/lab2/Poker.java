@@ -34,7 +34,7 @@ public class Poker {
         }
 
         System.out.print("Введите количество игроков: "); int n = sc.nextInt();
-        if(n > 5) { System.out.println("Неверное количество игроков! N установлено 5."); n = 5; }
+        if(n > 5 || n < 1) { System.out.println("Неверное количество игроков! N установлено 5."); n = 5; }
 
         // Раздача карт
         for(int i = 0; i < n; i++){
@@ -43,6 +43,5 @@ public class Poker {
             }
             System.out.print("\n\n");
         }
-
     }
 }

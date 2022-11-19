@@ -16,7 +16,7 @@ public class Second {
         if (sc.hasNextInt()){
             n = sc.nextInt();
         }
-        int array[] = new int[n];
+        int[] array = new int[n];
         int sum = 0; int i = 0; int min = 0; int max = 0;
         while (i < n) {
             System.out.print("Введите число: ");
@@ -30,7 +30,7 @@ public class Second {
             i += 1;
         }
         System.out.println("Сумма членов целочисленного массива " + sum);
-        System.out.println("Среднее арифметическое членов массива равно " + Double.valueOf(sum)/n);
+        System.out.println("Среднее арифметическое членов массива равно " + (double) sum /n);
         System.out.println("Максимальное значение равно " + max);
         System.out.println("Минимальное значение равно " + min);
     }

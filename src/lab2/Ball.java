@@ -34,9 +34,9 @@ public class Ball {
         this.x = x;
         this.y = y;
     }
-    public void move(double xDisp, double yDisp) {
-        this.x += xDisp;
-        this.y += yDisp;
+    public void move(double xDelta, double yDelta) {
+        this.x += xDelta;
+        this.y += yDelta;
     }
     @Override
     public String toString(){

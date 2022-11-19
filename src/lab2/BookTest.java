@@ -6,9 +6,7 @@ import java.util.Vector;
 /* Создать класс, описывающий книгу (Book). В классе должны быть
 описаны нужные свойства книги (автор, название, год написания и т. д.) и
 методы для получения, изменения этих свойств. Протестировать работу класса
-в классе BookTest, содержащим метод статический main(String[] args). Создать
-класс книжная полка, в котором поля данных класса это массив объектов типа
-книги (Book, и количество книг на книжной полке. Написать методы класса,
+в классе BookTest, содержащим метод статический main(String[] args). Написать методы класса,
 которые возвращают книги с самым поздним и самым ранним сроком издания. */
 
 public class BookTest {
@@ -41,6 +39,20 @@ public class BookTest {
         return oldest;
     }
 
+    public static void sortShelf(){
+        for(int i = 0; i < items.size(); i++){
+            for (int j = 0; j < items.size()-i-1; j++){
+                if (items.get(j).getPublishYear() > items.get(j+1).getPublishYear()){
+                    Book temp = items.get(j);
+                    items.set(j, items.get(j+1));
+                    items.set(j+1, temp);
+                }
+            }
+        }
+        System.out.println("Результат сортировки: ");
+        BookTest.displayItems();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите количество книг: ");
@@ -54,7 +66,10 @@ public class BookTest {
             BookTest.items.add(a);
         }
         BookTest.displayItems();
-        System.out.println(getNewest().toString());
-        System.out.println(getOldest().toString());
+
+        System.out.println("Самая новая книга - " + getNewest().toString());
+        System.out.println("Самая старая книга - " + getOldest().toString());
+
+        BookTest.sortShelf();
     }
 }

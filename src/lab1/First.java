@@ -24,6 +24,6 @@ public class First {
             }
         }
         System.out.println("Сумма членов целочисленного массива " + sum);
-        System.out.println("Среднее арифметическое членов массива равно " + Double.valueOf(sum)/n);
+        System.out.println("Среднее арифметическое членов массива равно " + (double) sum /n);
     }
 }
